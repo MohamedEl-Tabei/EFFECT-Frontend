@@ -24,7 +24,7 @@ ChartJS.register(
   Legend
 );
 
-const SleepBoard = () => {
+const SleepVsActivity = () => {
   const options = {
     responsive: true,
     plugins: {
@@ -52,7 +52,7 @@ const SleepBoard = () => {
       if (isMounted) {
         try {
           let response = await services.request.request.post(
-            "doneActivity/sleepBoardDetails",
+            "doneActivity/sleepVsActivity",
             { date: Date().slice(0, 15) },
             {
               headers: {
@@ -74,7 +74,7 @@ const SleepBoard = () => {
   }, [user.token, isMounted]);
   return (
     <div
-      className={`h-85vh bg-light m-shadow    rounded-5 d-flex flex-column aic jcc daily-hours-mobile-d-none `}
+      className={`h-85vh bg-light m-shadow mt-5    rounded-5 d-flex flex-column aic jcc daily-hours-mobile-d-none `}
     >
       {loader ? (
         <Spinner/>
@@ -92,4 +92,4 @@ const SleepBoard = () => {
     </div>
   );
 };
-export default SleepBoard;
+export default SleepVsActivity;

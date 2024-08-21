@@ -115,7 +115,7 @@ const DayDetails = () => {
           className="m-shadow rounded-circle d-flex aic jcc flex-column "
           style={{ width: 200, height: 200 }}
         >
-          <Card.Title>{progress}%</Card.Title>
+          <Card.Title>{progress.toFixed(0)}%</Card.Title>
 
           <Card.Text>{date.slice(0, 15)}</Card.Text>
         </div>

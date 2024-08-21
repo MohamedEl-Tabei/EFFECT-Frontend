@@ -10,6 +10,7 @@ const Dashboard = () => {
           </h5>
           <Components.DailyProgress />
           <Components.SleepBoard />
+          <Components.SleepVsActivity />
           <Components.DayDetails />
         </div>
       </div>

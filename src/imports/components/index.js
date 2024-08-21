@@ -28,7 +28,7 @@ import DailyProgress from "../../components/dailyProgress";
 import DayDetails from "../../components/dayDetails";
 //////////
 //import Test from "../../components/test";
-
+import SleepVsActivity from "../../components/sleepVsActivity"
 const Components = {
   Logo,
   Error,
@@ -53,6 +53,6 @@ const Components = {
   GoalChecklist,
   GoalDetails,
   ActivityDetails,
-  SleepBoard,SleepSchedule,DailyProgress,DayDetails
+  SleepBoard,SleepSchedule,DailyProgress,DayDetails,SleepVsActivity
 };
 export default Components;
