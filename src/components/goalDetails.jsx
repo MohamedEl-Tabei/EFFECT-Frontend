@@ -184,17 +184,17 @@ const GoalDetails = (props) => {
           ) : (
             <span className="text-light">{`You spent ${
               numberOfHours.toFixed(2)
-            } hours of efforts to achieve this goal.`}</span>
+            } hours of efforts to ${props.goal.name}`}</span>
           )}
         </h3>
         <hr className="p-1 w-75" />
         <div className="text-center d-flex aic flex-column mb-4">
-          <div className="wmc text-m ff-m ">{`${props.goal.name.toUpperCase()}`}</div>
+          <div className="wmc text-m ff-m ">{`${props.goal.achievedDate === "Not yet." ?props.goal.name.toUpperCase():"Congratulations"}`}</div>
         </div>
         <div className="w-50 w-xxsm-100 d-flex ">
           {props.showDetails ? (
             <Doughnut
-            className="w-100 h-100 p-3"
+            className={`w-100 h-100 p-3 ${props.goal.achievedDate === "Not yet." ?"":"d-none"}`}
               options={{
                 cutout:"70%",
                 responsive: true,
@@ -212,7 +212,7 @@ const GoalDetails = (props) => {
           )}
         </div>
       </div>
-      <div
+      {/*<div
         className={`${showLoader ? "invisible " : ""} ${
           props.goal.achievedDate === "Not yet." ? "d-none" : ""
         } w-100 d-flex justify-content-between p-5 text-light`}
@@ -225,7 +225,7 @@ const GoalDetails = (props) => {
           <div>EXPECTED</div>
           <div className="ff-m text-m- mt-2">{props.goal.expectedDate}</div>
         </div>
-      </div>
+      </div>*/}
       <div
         className={`${showLoader ? "invisible " : ""} ${
           props.goal.achievedDate !== "Not yet." ? "d-none" : ""
