@@ -212,7 +212,7 @@ const GoalDetails = (props) => {
           )}
         </div>
       </div>
-      {/*<div
+      <div
         className={`${showLoader ? "invisible " : ""} ${
           props.goal.achievedDate === "Not yet." ? "d-none" : ""
         } w-100 d-flex justify-content-between p-5 text-light`}
@@ -225,7 +225,7 @@ const GoalDetails = (props) => {
           <div>EXPECTED</div>
           <div className="ff-m text-m- mt-2">{props.goal.expectedDate}</div>
         </div>
-      </div>*/}
+      </div>
       <div
         className={`${showLoader ? "invisible " : ""} ${
           props.goal.achievedDate !== "Not yet." ? "d-none" : ""
