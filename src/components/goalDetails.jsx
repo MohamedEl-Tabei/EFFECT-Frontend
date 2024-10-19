@@ -80,7 +80,7 @@ const GoalDetails = (props) => {
   }, [props.showDetails, props.goal.name, user.token]);
   return (
     <div
-      className="w-75 w-xxsm-100 text-light border bg-c relative"
+      className="w-75 w-xxsm-100 text-light border bg-c relative d-flex flex-column justify-content-between"
       style={{ height: "max-content", minHeight: "100%" }}
     >
       <div
